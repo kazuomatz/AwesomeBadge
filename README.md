@@ -11,6 +11,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+FontAwesome.swift
+
 ## Installation
 
 AwesomeBadge is available through [CocoaPods](https://cocoapods.org). To install
@@ -22,7 +24,7 @@ pod 'AwesomeBadge'
 
 ## Author
 
-kazuomatz, matsunaga@iarchitect.co.jp
+kazuomatz, getlasterror@gmail.com
 
 ## License
 

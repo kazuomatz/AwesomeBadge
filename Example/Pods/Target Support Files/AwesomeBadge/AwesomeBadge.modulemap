@@ -1,0 +1,6 @@
+framework module AwesomeBadge {
+  umbrella header "AwesomeBadge-umbrella.h"
+
+  export *
+  module * { export * }
+}

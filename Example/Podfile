@@ -1,4 +1,5 @@
 use_frameworks!
+platform :ios,'11.0'
 
 target 'AwesomeBadge_Example' do
   pod 'AwesomeBadge', :path => '../'
@@ -10,5 +11,6 @@ target 'AwesomeBadge_Example' do
     pod 'Nimble', '~> 7.0.2'
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
     pod 'Nimble-Snapshots' , '~> 6.3.0'
+    pod 'FontAwesome.swift'
   end
 end

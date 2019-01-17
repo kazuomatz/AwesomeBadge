@@ -1,0 +1,6 @@
+framework module Pods_AwesomeBadge_Tests {
+  umbrella header "Pods-AwesomeBadge_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "AwesomeBadge",
+  "version": "0.1.0",
+  "summary": "A short description of AwesomeBadge.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/kazuomatz/AwesomeBadge",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "kazuomatz": "matsunaga@iarchitect.co.jp"
+  },
+  "source": {
+    "git": "https://github.com/kazuomatz/AwesomeBadge.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AwesomeBadge/Classes/**/*"
+}
