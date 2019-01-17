@@ -17,7 +17,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     //MARK:- Badge Sample Data Array
     let badgeData: [Dictionary<String,Any>] =  [
         ["fontName": "fa-bus-alt", "color": "4C9900", "style": AwesomeBadgeView.FontStyle.solid ],
-        ["fontName": "fa-grin", "color": "FFFF00", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-grin", "color": "f4c242", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-grin-hearts", "color": "FF99CC", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-paw", "color": "663300", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-trophy", "color": "999900", "style": AwesomeBadgeView.FontStyle.solid ],
@@ -26,7 +26,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         ["fontName": "fa-seedling", "color": "66CC00", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-bug", "color": "A0A0A0", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-tv", "color": "330066", "style": AwesomeBadgeView.FontStyle.solid ],
-        ["fontName": "fa-lightbulb", "color": "FFFF00", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-lightbulb", "color": "c0c452", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-book-dead", "color": "000000", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-gem", "color": "CC342D", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-user-astronaut", "color": "000033", "style": AwesomeBadgeView.FontStyle.solid ],
