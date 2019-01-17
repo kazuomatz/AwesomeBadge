@@ -21,6 +21,17 @@ extension UIColor {
             return nil
         }
     }
+    convenience init(hex: String, alpha: CGFloat) {
+        let v = hex.map { String($0) } + Array(repeating: "0", count: max(6 - hex.count, 0))
+        let r = CGFloat(Int(v[0] + v[1], radix: 16) ?? 0) / 255.0
+        let g = CGFloat(Int(v[2] + v[3], radix: 16) ?? 0) / 255.0
+        let b = CGFloat(Int(v[4] + v[5], radix: 16) ?? 0) / 255.0
+        self.init(red: r, green: g, blue: b, alpha: min(max(alpha, 0), 1))
+    }
+    
+    convenience init(hex: String) {
+        self.init(hex: hex, alpha: 1.0)
+    }
 }
 
 
@@ -36,17 +47,16 @@ public class AwesomeBadgeView:UIView {
         super.init(coder:aDecoder)
     }
     
-    public init(fontStyle:FontStyle, fontName:String, frame:CGRect, backgroundColor:UIColor, gradient:Bool = true, foregroundColor:UIColor = .white) {
+    public init(fontStyle:FontStyle, fontName:String, frame:CGRect, backgroundColor:String, gradient:Bool = true, foregroundColor:String = "ffffff") {
         super.init(frame: frame)
         self.showBadge(fontStyle: fontStyle, fontName: fontName, radius: frame.size.width, backgroundColor: backgroundColor, gradient: gradient,foregroundColor: foregroundColor)
     }
     
-    public func showBadge(fontStyle:FontStyle ,fontName:String, radius:CGFloat, backgroundColor:UIColor, gradient:Bool = true, foregroundColor:UIColor = .white) {
-        
+    public func showBadge(fontStyle:FontStyle ,fontName:String, radius:CGFloat, backgroundColor:String, gradient:Bool = true, foregroundColor:String = "ffffff") {
         self.subviews.forEach { (view) in
             view.removeFromSuperview()
         }
-        self.backgroundColor = backgroundColor
+        self.backgroundColor = UIColor(hex: backgroundColor)
         self.clipsToBounds = true
         self.backgroundColor = .clear
         
@@ -55,7 +65,7 @@ public class AwesomeBadgeView:UIView {
         let boderWidth:CGFloat = radius * 0.08
         
         let backgroundView:UIView = UIView(frame:self.frame)
-        backgroundView.backgroundColor = backgroundColor.darker(by: 20)
+        backgroundView.backgroundColor = UIColor(hex: backgroundColor).darker(by: 20)
         backgroundView.layer.cornerRadius = radius / 2
         
         let badgeBackgroundViewFrame = CGRect(x: boderWidth, y: boderWidth,width: radius - boderWidth * 2, height: radius - boderWidth * 2)
@@ -64,24 +74,25 @@ public class AwesomeBadgeView:UIView {
         badgeBackgroundView.clipsToBounds = true
         
         if gradient {
-            let gradient:CAGradientLayer = CAGradientLayer(layer: badgeBackgroundView.layer)
-            gradient.frame = badgeBackgroundView.bounds
-            gradient.colors = [
-                backgroundColor.lighter(by:60)?.cgColor as Any,
-                backgroundColor.cgColor  as Any,
-                backgroundColor.darker(by:30)?.cgColor as Any
+            let color = UIColor(hex: backgroundColor)
+            let gradientLayer:CAGradientLayer = CAGradientLayer(layer: badgeBackgroundView.layer)
+            gradientLayer.frame = badgeBackgroundView.bounds
+            gradientLayer.colors = [
+                color.lighter(by:60)?.cgColor as Any,
+                color.cgColor  as Any,
+                color.darker(by:30)?.cgColor as Any
             ]
-            gradient.cornerRadius = (radius - boderWidth * 2) / 2
-            badgeBackgroundView.layer.addSublayer(gradient)
+            gradientLayer.cornerRadius = (radius - boderWidth * 2) / 2
+            badgeBackgroundView.layer.addSublayer(gradientLayer)
         }
         
         let imageView:UIImageView = UIImageView(frame:CGRect(x:0,y:0,width:radius - boderWidth * 2, height:radius - boderWidth * 2))
         imageView.contentMode = .center
         
-        let iconSize = CGSize(width: radius - boderWidth * 2 - 10, height: radius - boderWidth * 2 - 10)
+        let iconSize = CGSize(width: radius - boderWidth * 4, height: radius - boderWidth * 4)
         let faFontName = FontAwesomeIcons[fontName]
         if  faFontName != nil {
-            let image = UIImage.fontAwesomeIcon(name: FontAwesome(rawValue: faFontName!)!, style: FontAwesomeStyle(rawValue: fontStyle.rawValue)!, textColor: foregroundColor, size: iconSize)
+            let image = UIImage.fontAwesomeIcon(name: FontAwesome(rawValue: faFontName!)!, style: FontAwesomeStyle(rawValue: fontStyle.rawValue)!, textColor: UIColor(hex:foregroundColor), size: iconSize)
             imageView.image = image
             imageView.backgroundColor = .clear
             imageView.layer.cornerRadius = (radius - boderWidth * 2) / 2

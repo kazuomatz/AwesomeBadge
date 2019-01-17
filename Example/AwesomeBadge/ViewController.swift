@@ -14,15 +14,28 @@ import AwesomeBadge
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    //Sample Data
     let badgeData: [Dictionary<String,Any>] =  [
-        ["fontName": "arrowAltCircleUp", "color": UIColor.black ],
-        ["fontName": "addressBook", "color":  UIColor.yellow ],
-        ["fontName": "addressBook", "color": UIColor.green ],
-        ["fontName": "addressBook", "color": UIColor.green ],
-        ["fontName": "addressBook", "color": UIColor.green ],
-        ["fontName": "addressBook", "color": UIColor.green ],
-        ["fontName": "addressBook", "color": UIColor.green ],
-        ["fontName": "addressBook", "color": UIColor.green ]
+        ["fontName": "fa-bus-alt", "color": "4C9900", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-grin", "color": "FFFF00", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-grin-hearts", "color": "FF99CC", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-paw", "color": "663300", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-trophy", "color": "999900", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-stroopwafel", "color": "66B2FF", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-dollar-sign", "color": "006666", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-seedling", "color": "66CC00", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-bug", "color": "A0A0A0", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-tv", "color": "330066", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-lightbulb", "color": "FFFF00", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-book-dead", "color": "000000", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-gem", "color": "CC342D", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-user-astronaut", "color": "000033", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-cloud-sun", "color": "FF8000", "style": AwesomeBadgeView.FontStyle.solid ],
+        ["fontName": "fa-github", "color": "000000", "style": AwesomeBadgeView.FontStyle.brands ],
+        ["fontName": "fa-aws", "color": "ff9900", "style": AwesomeBadgeView.FontStyle.brands ],
+        ["fontName": "fa-jenkins", "color": "000000", "style": AwesomeBadgeView.FontStyle.brands ],
+        ["fontName": "fa-twitter", "color": "1da1f2", "style": AwesomeBadgeView.FontStyle.brands ],
+        ["fontName": "fa-docker", "color": "007bff", "style": AwesomeBadgeView.FontStyle.brands ],
         ]
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -30,23 +43,9 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
-        let radius:CGFloat = 200
-        let frame = CGRect(x: CGFloat(UIScreen.main.bounds.size.width / 2.0 - radius / 2.0),
-                           y: CGFloat(UIScreen.main.bounds.size.height / 2.0 - radius / 2.0),
-                           width: radius,
-                           height: radius
-        )
-        
-        let badgeView = AwesomeBadgeView(
-            fontStyle: .solid,
-            fontName: "fa-addressBook",
-            frame: frame,
-            backgroundColor: .black)
-        self.view.addSubview(badgeView)
-        //self.collectionView.isHidden = true
-        
     }
+    
+    private var selectedIndex:Int = 0
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
@@ -61,9 +60,28 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BadgeCell", for: indexPath)
         let badgeView:AwesomeBadgeView = cell.viewWithTag(1) as! AwesomeBadgeView
-        badgeView.showBadge(fontStyle: .solid, fontName:badgeData[indexPath.item]["fontName"] as! String , radius: self.collectionView.frame.size.width / 4 - 10, backgroundColor: badgeData[indexPath.item]["color"] as! UIColor)
+        badgeView.showBadge(
+            fontStyle: badgeData[indexPath.item]["style"] as! AwesomeBadgeView.FontStyle,
+            fontName:badgeData[indexPath.item]["fontName"] as! String ,
+            radius: self.collectionView.frame.size.width / 4 - 10,
+            backgroundColor: badgeData[indexPath.item]["color"] as! String,
+            gradient: false)
         return cell
         
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.item
+        performSegue(withIdentifier: "presentDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "presentDetail") {
+            let detailViewController: DetailViewController = (segue.destination as? DetailViewController)!
+            detailViewController.modalTransitionStyle = .crossDissolve
+            detailViewController.badgeData = self.badgeData[selectedIndex]
+        }
     }
     
     
