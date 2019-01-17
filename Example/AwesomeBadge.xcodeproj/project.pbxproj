@@ -32,7 +32,7 @@
 		12FE66D7D10ADD47C36858C0 /* Pods_AwesomeBadge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeBadge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1517CCBD77754E2572364E68 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2178965C21F060CB008F1CDD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		2460A59A5642470448A97017 /* AwesomeBadge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AwesomeBadge.podspec; path = ../AwesomeBadge.podspec; sourceTree = "<group>"; };
+		2460A59A5642470448A97017 /* AwesomeBadge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AwesomeBadge.podspec; path = ../AwesomeBadge.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* AwesomeBadge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeBadge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

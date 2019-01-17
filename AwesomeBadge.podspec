@@ -28,18 +28,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/kazuomatz/AwesomeBadge.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/kazuomatz'
 
-  s.ios.deployment_target = '8.0'
-
   s.source_files = 'Classes/**/*'
   s.ios.deployment_target = '11.0'
   s.dependency 'FontAwesome.swift'
   s.frameworks = 'UIKit'
-
-  # s.resource_bundles = {
-  #   'AwesomeBadge' => ['AwesomeBadge/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
