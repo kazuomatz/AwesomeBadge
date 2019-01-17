@@ -1,5 +1,6 @@
 PODS:
-  - AwesomeBadge (0.1.0)
+  - AwesomeBadge (0.1.0):
+    - FontAwesome.swift
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -35,7 +36,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AwesomeBadge: aba3c93a5ad6e7f67b8b176b2eddeeb434a65ef3
+  AwesomeBadge: adaa705c8c884291effe9f2757da4b89ef6789bf
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FontAwesome.swift: 18fb500c0decc2bbfadf2ae16a936704ec2c49bd
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac

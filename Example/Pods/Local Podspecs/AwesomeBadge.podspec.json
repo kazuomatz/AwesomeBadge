@@ -1,22 +1,28 @@
 {
   "name": "AwesomeBadge",
   "version": "0.1.0",
-  "summary": "A short description of AwesomeBadge.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "a view class as Like a badge using fontawesome 5.",
+  "description": "a view class as Like a badge using fontawesome 5. As a use, remuneration etc. at the mission reward of the game app etc.",
   "homepage": "https://github.com/kazuomatz/AwesomeBadge",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "kazuomatz": "matsunaga@iarchitect.co.jp"
+    "kazuomatz": "getlasterror@gmail.com"
   },
   "source": {
     "git": "https://github.com/kazuomatz/AwesomeBadge.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "AwesomeBadge/Classes/**/*"
+  "source_files": "Classes/**/*",
+  "dependencies": {
+    "FontAwesome.swift": [
+
+    ]
+  },
+  "frameworks": "UIKit"
 }

@@ -26,11 +26,11 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'kazuomatz' => 'getlasterror@gmail.com' }
   s.source           = { :git => 'https://github.com/kazuomatz/AwesomeBadge.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/kazuomatz'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   s.ios.deployment_target = '11.0'
   s.dependency 'FontAwesome.swift'
   s.frameworks = 'UIKit'
