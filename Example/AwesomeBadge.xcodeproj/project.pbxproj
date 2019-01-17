@@ -13,8 +13,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		8200E4317298CD4056B71BF8 /* Pods_AwesomeBadge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C333FA75B10E75DB94CA14C4 /* Pods_AwesomeBadge_Example.framework */; };
-		D9142B33CFBA9F2384D6C071 /* Pods_AwesomeBadge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A2288205A04DFE1BB957B8F /* Pods_AwesomeBadge_Tests.framework */; };
+		7DA5D5F6385C344C98207266 /* Pods_AwesomeBadge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FE66D7D10ADD47C36858C0 /* Pods_AwesomeBadge_Tests.framework */; };
+		973701A7636966D65183CDA0 /* Pods_AwesomeBadge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B451259D30B82EE3637F44 /* Pods_AwesomeBadge_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13E9543E9C135B02334C98B6 /* Pods-AwesomeBadge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Example/Pods-AwesomeBadge_Example.release.xcconfig"; sourceTree = "<group>"; };
+		12FE66D7D10ADD47C36858C0 /* Pods_AwesomeBadge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeBadge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1517CCBD77754E2572364E68 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		1A2288205A04DFE1BB957B8F /* Pods_AwesomeBadge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeBadge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2460A59A5642470448A97017 /* AwesomeBadge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AwesomeBadge.podspec; path = ../AwesomeBadge.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AwesomeBadge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeBadge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +41,12 @@
 		607FACE51AFB9204008FA782 /* AwesomeBadge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeBadge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		6F991C348B485176BADB52CC /* Pods-AwesomeBadge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Tests/Pods-AwesomeBadge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		77C1646A855513E5AB6BB820 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C333FA75B10E75DB94CA14C4 /* Pods_AwesomeBadge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeBadge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C53678C9B060ACA335AB355A /* Pods-AwesomeBadge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Example/Pods-AwesomeBadge_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C6BFF526E48396E80A6BC6ED /* Pods-AwesomeBadge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Tests/Pods-AwesomeBadge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F7C385EBA1D6B55D89E830B4 /* Pods-AwesomeBadge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Tests/Pods-AwesomeBadge_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8E13ACE10E49993FFCE997AA /* Pods-AwesomeBadge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Example/Pods-AwesomeBadge_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8E1F7CB65B34D094BF0A02CC /* Pods-AwesomeBadge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Example/Pods-AwesomeBadge_Example.release.xcconfig"; sourceTree = "<group>"; };
+		98966AC28C467B91064982D6 /* Pods-AwesomeBadge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeBadge_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeBadge_Tests/Pods-AwesomeBadge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1B451259D30B82EE3637F44 /* Pods_AwesomeBadge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeBadge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8200E4317298CD4056B71BF8 /* Pods_AwesomeBadge_Example.framework in Frameworks */,
+				973701A7636966D65183CDA0 /* Pods_AwesomeBadge_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,20 +62,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9142B33CFBA9F2384D6C071 /* Pods_AwesomeBadge_Tests.framework in Frameworks */,
+				7DA5D5F6385C344C98207266 /* Pods_AwesomeBadge_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F88CBACB2D1498A25C63E54 /* Frameworks */ = {
+		15C74DD03B401A76B3A80ABB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C333FA75B10E75DB94CA14C4 /* Pods_AwesomeBadge_Example.framework */,
-				1A2288205A04DFE1BB957B8F /* Pods_AwesomeBadge_Tests.framework */,
+				8E13ACE10E49993FFCE997AA /* Pods-AwesomeBadge_Example.debug.xcconfig */,
+				8E1F7CB65B34D094BF0A02CC /* Pods-AwesomeBadge_Example.release.xcconfig */,
+				98966AC28C467B91064982D6 /* Pods-AwesomeBadge_Tests.debug.xcconfig */,
+				6F991C348B485176BADB52CC /* Pods-AwesomeBadge_Tests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -85,8 +87,8 @@
 				607FACD21AFB9204008FA782 /* Example for AwesomeBadge */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				AA2F62CF88B09699E6F98E29 /* Pods */,
-				1F88CBACB2D1498A25C63E54 /* Frameworks */,
+				15C74DD03B401A76B3A80ABB /* Pods */,
+				6A0658F7A9718D9C39A9AA7A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,15 +150,13 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		AA2F62CF88B09699E6F98E29 /* Pods */ = {
+		6A0658F7A9718D9C39A9AA7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C53678C9B060ACA335AB355A /* Pods-AwesomeBadge_Example.debug.xcconfig */,
-				13E9543E9C135B02334C98B6 /* Pods-AwesomeBadge_Example.release.xcconfig */,
-				C6BFF526E48396E80A6BC6ED /* Pods-AwesomeBadge_Tests.debug.xcconfig */,
-				F7C385EBA1D6B55D89E830B4 /* Pods-AwesomeBadge_Tests.release.xcconfig */,
+				A1B451259D30B82EE3637F44 /* Pods_AwesomeBadge_Example.framework */,
+				12FE66D7D10ADD47C36858C0 /* Pods_AwesomeBadge_Tests.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "AwesomeBadge_Example" */;
 			buildPhases = (
-				397B7EE991FC40855FF2591F /* [CP] Check Pods Manifest.lock */,
+				108B81144E366B3E6C52D04B /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				2D584F439071189B118CF908 /* [CP] Embed Pods Frameworks */,
+				06B6F6040A91ECA1657CE516 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,11 +185,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "AwesomeBadge_Tests" */;
 			buildPhases = (
-				4512F2D04A6B231E15466208 /* [CP] Check Pods Manifest.lock */,
+				1849A2D514E46E17E748384A /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				49B84D9481B3A23CD83726B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,7 +261,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D584F439071189B118CF908 /* [CP] Embed Pods Frameworks */ = {
+		06B6F6040A91ECA1657CE516 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,7 +281,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AwesomeBadge_Example/Pods-AwesomeBadge_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		397B7EE991FC40855FF2591F /* [CP] Check Pods Manifest.lock */ = {
+		108B81144E366B3E6C52D04B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,7 +299,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4512F2D04A6B231E15466208 /* [CP] Check Pods Manifest.lock */ = {
+		1849A2D514E46E17E748384A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,32 +315,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49B84D9481B3A23CD83726B1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AwesomeBadge_Tests/Pods-AwesomeBadge_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AwesomeBadge_Tests/Pods-AwesomeBadge_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -495,7 +468,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C53678C9B060ACA335AB355A /* Pods-AwesomeBadge_Example.debug.xcconfig */;
+			baseConfigurationReference = 8E13ACE10E49993FFCE997AA /* Pods-AwesomeBadge_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AwesomeBadge/Info.plist;
@@ -511,7 +484,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13E9543E9C135B02334C98B6 /* Pods-AwesomeBadge_Example.release.xcconfig */;
+			baseConfigurationReference = 8E1F7CB65B34D094BF0A02CC /* Pods-AwesomeBadge_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AwesomeBadge/Info.plist;
@@ -527,7 +500,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6BFF526E48396E80A6BC6ED /* Pods-AwesomeBadge_Tests.debug.xcconfig */;
+			baseConfigurationReference = 98966AC28C467B91064982D6 /* Pods-AwesomeBadge_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -549,7 +522,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7C385EBA1D6B55D89E830B4 /* Pods-AwesomeBadge_Tests.release.xcconfig */;
+			baseConfigurationReference = 6F991C348B485176BADB52CC /* Pods-AwesomeBadge_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

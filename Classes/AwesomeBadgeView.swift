@@ -26,16 +26,22 @@ extension UIColor {
 
 public class AwesomeBadgeView:UIView {
     
+    public enum FontStyle: String {
+        case solid = "solid"
+        case regular = "regular"
+        case brands = "brands"
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
     }
     
-    public init(fontStyle:FontAwesomeStyle, fontName:FontAwesome, frame:CGRect, backgroundColor:UIColor, gradient:Bool = true, foregroundColor:UIColor = .white) {
+    public init(fontStyle:FontStyle, fontName:String, frame:CGRect, backgroundColor:UIColor, gradient:Bool = true, foregroundColor:UIColor = .white) {
         super.init(frame: frame)
         self.showBadge(fontStyle: fontStyle, fontName: fontName, radius: frame.size.width, backgroundColor: backgroundColor, gradient: gradient,foregroundColor: foregroundColor)
     }
     
-    public func showBadge(fontStyle:FontAwesomeStyle ,fontName:FontAwesome, radius:CGFloat, backgroundColor:UIColor, gradient:Bool = true, foregroundColor:UIColor = .white) {
+    public func showBadge(fontStyle:FontStyle ,fontName:String, radius:CGFloat, backgroundColor:UIColor, gradient:Bool = true, foregroundColor:UIColor = .white) {
         
         self.subviews.forEach { (view) in
             view.removeFromSuperview()
@@ -73,15 +79,16 @@ public class AwesomeBadgeView:UIView {
         imageView.contentMode = .center
         
         let iconSize = CGSize(width: radius - boderWidth * 2 - 10, height: radius - boderWidth * 2 - 10)
-        let image = UIImage.fontAwesomeIcon(name: fontName, style: fontStyle, textColor: foregroundColor, size: iconSize)
-        imageView.image = image
-        imageView.backgroundColor = .clear
-        imageView.layer.cornerRadius = (radius - boderWidth * 2) / 2
-        
+        let faFontName = FontAwesomeIcons[fontName]
+        if  faFontName != nil {
+            let image = UIImage.fontAwesomeIcon(name: FontAwesome(rawValue: faFontName!)!, style: FontAwesomeStyle(rawValue: fontStyle.rawValue)!, textColor: foregroundColor, size: iconSize)
+            imageView.image = image
+            imageView.backgroundColor = .clear
+            imageView.layer.cornerRadius = (radius - boderWidth * 2) / 2
+        }
         badgeBackgroundView.addSubview(imageView)
         backgroundView.addSubview(badgeBackgroundView)
         self.addSubview(backgroundView)
-        
     }
     
     

@@ -40,7 +40,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         let badgeView = AwesomeBadgeView(
             fontStyle: .solid,
-            fontName: .addressBook,
+            fontName: "fa-addressBook",
             frame: frame,
             backgroundColor: .black)
         self.view.addSubview(badgeView)
@@ -61,7 +61,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BadgeCell", for: indexPath)
         let badgeView:AwesomeBadgeView = cell.viewWithTag(1) as! AwesomeBadgeView
-        badgeView.showBadge(fontStyle: .solid, fontName:badgeData[indexPath.item]["fontName"] as! FontAwesome , radius: self.collectionView.frame.size.width / 4 - 10, backgroundColor: badgeData[indexPath.item]["color"] as! UIColor)
+        badgeView.showBadge(fontStyle: .solid, fontName:badgeData[indexPath.item]["fontName"] as! String , radius: self.collectionView.frame.size.width / 4 - 10, backgroundColor: badgeData[indexPath.item]["color"] as! UIColor)
         return cell
         
     }
