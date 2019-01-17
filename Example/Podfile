@@ -4,8 +4,4 @@ platform :ios,'11.0'
 target 'AwesomeBadge_Example' do
   pod 'AwesomeBadge', :path => '../'
   pod 'FontAwesome.swift'
-
-  target 'AwesomeBadge_Tests' do
-    inherit! :search_paths
-  end
 end
