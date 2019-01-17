@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     public var badgeData:Dictionary<String,Any>?
     @IBOutlet weak var containerView:UIView!
     
+    //MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -33,6 +34,7 @@ class DetailViewController: UIViewController {
         self.containerView.addSubview(badgeView)
     }
     
+    //MARK:- Dismiss View Controller
     @IBAction func onClose(_ sender: Any) {
         self.dismiss(animated: true)
     }

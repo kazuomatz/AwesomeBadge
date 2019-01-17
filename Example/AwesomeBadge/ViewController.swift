@@ -9,12 +9,12 @@
 import UIKit
 import AwesomeBadge
 
-
-//import FontAwesome_swift
-
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    //Sample Data
+    @IBOutlet weak var collectionView: UICollectionView!
+    private var selectedIndex:Int = 0
+    
+    //MARK:- Badge Sample Data Array
     let badgeData: [Dictionary<String,Any>] =  [
         ["fontName": "fa-bus-alt", "color": "4C9900", "style": AwesomeBadgeView.FontStyle.solid ],
         ["fontName": "fa-grin", "color": "FFFF00", "style": AwesomeBadgeView.FontStyle.solid ],
@@ -36,17 +36,17 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         ["fontName": "fa-jenkins", "color": "000000", "style": AwesomeBadgeView.FontStyle.brands ],
         ["fontName": "fa-twitter", "color": "1da1f2", "style": AwesomeBadgeView.FontStyle.brands ],
         ["fontName": "fa-docker", "color": "007bff", "style": AwesomeBadgeView.FontStyle.brands ],
-        ]
+    ]
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    //MARK:- View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
     
-    private var selectedIndex:Int = 0
     
+    //MARK:- UICollectionView Delegate & Datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return badgeData.count
@@ -60,30 +60,19 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
         let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BadgeCell", for: indexPath)
         let badgeView:AwesomeBadgeView = cell.viewWithTag(1) as! AwesomeBadgeView
-        badgeView.showBadge(
+        badgeView.drawBadge(
             fontStyle: badgeData[indexPath.item]["style"] as! AwesomeBadgeView.FontStyle,
             fontName:badgeData[indexPath.item]["fontName"] as! String ,
             radius: self.collectionView.frame.size.width / 4 - 10,
             backgroundColor: badgeData[indexPath.item]["color"] as! String,
             gradient: false)
         return cell
-        
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.item
         performSegue(withIdentifier: "presentDetail", sender: nil)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "presentDetail") {
-            let detailViewController: DetailViewController = (segue.destination as? DetailViewController)!
-            detailViewController.modalTransitionStyle = .crossDissolve
-            detailViewController.badgeData = self.badgeData[selectedIndex]
-        }
-    }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let returnSize = CGSize(width: self.collectionView.frame.size.width / 4 - 5 , height: self.collectionView.frame.size.width / 4 - 5 );
@@ -102,5 +91,13 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     }
     
     
+    //MARK:- Prepare segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "presentDetail") {
+            let detailViewController: DetailViewController = (segue.destination as? DetailViewController)!
+            detailViewController.modalTransitionStyle = .crossDissolve
+            detailViewController.badgeData = self.badgeData[selectedIndex]
+        }
+    }
 }
 
