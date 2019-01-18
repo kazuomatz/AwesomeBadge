@@ -15,11 +15,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-FontAwesome.swift
+[FontAwesome.swift](https://github.com/thii/FontAwesome.swift)
 
 ## Installation
 
-AwesomeBadge is available through [CocoaPods](https://cocoapods.org). To install
+AwesomeBadge is available through [CocoaPods](https://cocoapods.org/pods/AwesomeBadge). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
@@ -78,4 +78,6 @@ kazuomatz, getlasterror@gmail.com
 
 ## License
 
-AwesomeBadge is available under the MIT license. See the LICENSE file for more info.
+- AwesomeBadge is available under the MIT license. See the LICENSE file for more info.
+- All font files licensed under [SIL OFL 1.1](http://scripts.sil.org/OFL)
+- FontAwesome.swift licensed under [MIT](http://thi.mit-license.org/)
