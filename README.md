@@ -36,7 +36,7 @@ let badgeView = AwesomeBadgeView(
             fontStyle: .brands,            // font awesome style .solid / .regular / .brands
             fontName: "fa-android",        // font awesome font name 'fa-xxxxx'
             frame: CGRect(x:0, y:0, width: 100,height: 100),
-            backgroundColor: "a4c639"     // Color (Hex String)
+            backgroundColor: "#a4c639"     // Color (Hex String)
         )
 self.view.addSubView(badgeView)       
 ```
@@ -49,7 +49,7 @@ let badgeView = AwesomeBadgeView(
             fontStyle: .brands,            // font awesome style .solid / .regular / .brands
             fontName: "fa-android",        // font awesome font name 'fa-xxxxx'
             frame: CGRect(x:0, y:0, width: 100,height: 100),
-            backgroundColor: "a4c639"     // Color (Hex String)
+            backgroundColor: "#a4c639"     // Color (Hex String)
             gradient: false               // not add GradientLayer
         )
 self.view.addSubView(badgeView)       
@@ -65,9 +65,9 @@ badgeView.drawBadge(
     fontStyle: .solid,
     fontName: "fa-star-and-crescent",
     radius: 200,
-    backgroundColor: "273751",
+    backgroundColor: "#273751",
     gradient: true,
-    foregroundColor: "f4e242"
+    foregroundColor: "#f4e242"
 )
 ```
 <img src="https://user-images.githubusercontent.com/2704723/51327322-6906ce80-1ab4-11e9-93a6-bbd8583f990f.png" width="20%"/>

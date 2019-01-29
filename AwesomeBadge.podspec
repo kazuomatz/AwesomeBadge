@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AwesomeBadge'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'a view class as Like a badge using fontawesome 5.'
 
 # This description is used to generate tags and improve search results.
