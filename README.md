@@ -72,6 +72,10 @@ badgeView.drawBadge(
 ```
 <img src="https://user-images.githubusercontent.com/2704723/51327322-6906ce80-1ab4-11e9-93a6-bbd8583f990f.png" width="20%"/>
 
+## Structure of Views
+
+<img src="https://user-images.githubusercontent.com/2704723/51910659-3e513a00-2413-11e9-83e6-bacecc610a32.png" width="75%"/>
+
 ## Author
 
 kazuomatz, getlasterror@gmail.com
